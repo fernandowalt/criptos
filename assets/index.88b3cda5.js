@@ -36,7 +36,7 @@ import{j as f,n as a,r as d,R as S,a as w}from"./vendor.72bc18de.js";const C=fun
     background-color: #a0e025;
     cursor: pointer;
   }
-`,D=({setMonedas:r})=>{const[n,i]=d.exports.useState([]),[c,o]=d.exports.useState(!1),[t,l]=k("Elige tu moneda",E),[p,h]=k("Elige tu criptomoneda",n);return d.exports.useEffect(()=>{(async()=>{const v=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(b=>({id:b.CoinInfo.Name,nombre:b.CoinInfo.FullName}));i(v)})()},[]),s(y,{children:[c&&e(P,{children:"todos los campos son requeridos"}),s("form",{onSubmit:u=>{if(u.preventDefault(),[t,p].includes("")){o(!0);return}o(!1),r({moneda:t,cripto:p})},children:[e(l,{}),e(h,{}),e(j,{type:"submit",value:"Cotizar"})]})]})};var I="/assets/imagen-criptos.c0430b0f.png";const A=a.div`
+`,D=({setMonedas:r})=>{const[n,i]=d.exports.useState([]),[c,o]=d.exports.useState(!1),[t,l]=k("Elige tu moneda",E),[p,h]=k("Elige tu criptomoneda",n);return d.exports.useEffect(()=>{(async()=>{const v=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(b=>({id:b.CoinInfo.Name,nombre:b.CoinInfo.FullName}));i(v)})()},[]),s(y,{children:[c&&e(P,{children:"todos los campos son requeridos"}),s("form",{onSubmit:u=>{if(u.preventDefault(),[t,p].includes("")){o(!0);return}o(!1),r({moneda:t,cripto:p})},children:[e(l,{}),e(h,{}),e(j,{type:"submit",value:"Cotizar"})]})]})};var I="/criptos/assets/imagen-criptos.c0430b0f.png";const A=a.div`
   color: #fff;
   font-family: "Lato" sans-serif;
   display: flex;
